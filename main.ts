@@ -1,6 +1,11 @@
-let bob = 0
 basic.forever(function () {
-    bob = GPS.anotherOne(bob)
-    basic.showNumber(bob)
-    basic.pause(100)
+    GPS.initialiseSerial()
+    GPS.update_position()
+    basic.pause(1000)
+    serial.redirectToUSB()
+    serial.setBaudRate(BaudRate.BaudRate9600)
+    serial.writeLine("" + (GPS.latitude()))
+    serial.writeLine("" + (GPS.longitude()))
+    serial.writeLine("" + (GPS.timestamp()))
+    serial.writeLine("" + (GPS.HDOP()))
 })
