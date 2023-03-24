@@ -1,7 +1,3 @@
-
-/**
- * Custom blocks
- */
 //% weight=100 color=#0fbc11 icon="\uf3c5"
 namespace GPS {
     let _latitude = -1;
