@@ -1,12 +1,11 @@
 {
     "name": "pxt-gps",
-    "version": "0.0.0",
+    "version": "0.0.2",
     "description": "",
     "dependencies": {
         "core": "*",
         "radio": "*",
-        "microphone": "*",
-        "pxt-gps": "github:dairequinlan/pxt-gps#a960bed28a298269d651289fa9207a2664b4a2bd"
+        "microphone": "*"
     },
     "files": [
         "README.md",
