@@ -3,6 +3,7 @@ namespace GPS {
     let _latitude = -1;
     let _longitude = -1;
     let _timestamp = -1;
+    let _altitude = -1;
     let _HDOP = -1;
     /* Get Location will query the Serial port 
        and get lines until it gets one with a GNGGA 
@@ -16,6 +17,7 @@ namespace GPS {
         _latitude = -1;
         _longitude = -1;
         _timestamp = -1;
+        _altitude = -1;
         _HDOP = -1;
         //lets get 20 rows and then quit out if we don't find the GNGGA
         for (let i = 0; i < 20; i++) {
@@ -42,6 +44,7 @@ namespace GPS {
                         (parseInt(splot[1].slice(2, 4)) * 60) +
                         (parseInt(splot[1].slice(4, 6)));
                     _HDOP = parseFloat(splot[8]);
+                    _altitude = parseFloat(splot[9]);
                     break;
                 }
             }
@@ -61,6 +64,11 @@ namespace GPS {
     //% block
     export function timestamp(): number {
         return _timestamp;
+    }
+
+    //% block
+    export function altitude(): number {
+        return _altitude;
     }
 
     //% block
