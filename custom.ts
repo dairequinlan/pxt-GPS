@@ -13,7 +13,7 @@ namespace GPS {
        the timestamp into seconds. */
 
     //% block
-    export function update_position() {
+    export function updatePosition() {
         _latitude = -1;
         _longitude = -1;
         _timestamp = -1;
